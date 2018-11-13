@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/northwestern.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+                <section>
+                    <h2>Cloud Computing Essentials</h2>
+                    <p>Northwestern IT Research Computing Services</p>
+                </section>
+
+                <section>
+                    <h2>Matthew Rich</h2>
+                    <p>m-rich@northwestern.edu</p>
+                    <h2>Jenni Hartman</h2>
+                    <p>jenni.hartman@northwestern.edu</p>
+                </section>
+
+                <section>
+                    <h4>What even is a cloud ☁️ ?</h4>
+                    <p>It's more than just other people's computers!</p>
+                    <p class="fragment">Programmable</p>
+					<p class="fragment">Scalable</p>
+					<p class="fragment">On Demand</p>
+					<p class="fragment">Usage-based billing</p>
+				</section>
+				
+				<section>
+                    <h4>Cloud offers new opportunities</h4>
+                    <p>Low financial barrier to entry</p>
+					<p>Easy experimentation</p>
+					<p>Automatable</p>
+					<p>Securable</p>
+					<p class="fragment">(Different from "Secure"!)</p>
+				</section>
+				
+				<section>
+					<h4>Layers of the Cloud</h4>
+					<p class="nomargin">Software as a Service</p>
+					<p class="greyed-out nomargin">Platform as a Service</p>
+					<p class="greyed-out nomargin">Infrastructure as a Service</p>
+					<hr>
+					<p>Ready-to-use applications, including from 3rd parties</p>
+					<p class="fragment">E.g. Dropbox, Azure Notebooks</p>
+				</section>
+
+				<section>
+					<h4>Layers of the Cloud</h4>
+					<p class="greyed-out nomargin">Software as a Service</p>
+					<p class="nomargin">Platform as a Service</p>
+					<p class="greyed-out nomargin">Infrastructure as a Service</p>
+					<hr>
+					<p>Deploy your application without managing servers</p>
+					<p class="fragment">E.g. AWS Elastic Beanstalk, Google App Engine</p>
+				</section>
+
+				<section>
+					<h4>Layers of the Cloud</h4>
+					<p class="greyed-out nomargin">Software as a Service</p>
+					<p class="greyed-out nomargin">Platform as a Service</p>
+					<p class="nomargin">Infrastructure as a Service</p>
+					<hr>
+					<p>Virtual hardware and networks</p>
+				</section>
+				  
+				<section>
+					<h4>Cloud Providers </h4>
+					<img src="img/cloudhosting.png" style="border: 2px solid #ccc;">
+					<p class="fragment">Other: IBM, Oracle, Digital Ocean, etc.</p>
+				</section>
+				
+				<section>
+					<h4>Compute Services 🖥️</h4>
+					<p>On-demand virtual servers</p>
+					<p>You manage from the OS up</p>
+					<p>Cloud provider manages virtual hardware</p>
+				</section>
+
+				<section>
+					<h4>Compute Services 🖥️</h4>
+					<p>Closest to "traditional" computing</p>
+					<p>Many different machine configurations (CPU cores, RAM, GPU, disk IOPS)</p>
+				</section>
+
+				<section>
+					<h4>Storage Services 📦</h4>
+					<p>Object Storage: put & get files over the web</p>
+					<p>Tiered storage for different access patterns</p>
+					<p>E.g. Amazon S3, Azure Blob Storage, Google Cloud Storage</p>
+				</section>
+
+				<section>
+					<h4>Storage Services 📁</h4>
+					<p>File Storage: NFS-style file access</p>
+					<p>E.g. Amazon EFS, Azure File Storage, Google Cloud Filestore</p>
+				</section>
+
+				<section>
+					<h4>Storage Services 📁</h4>
+					<p>Many Software-as-a-Service-style storage offerings!</p>
+					<p>Dropbox, Box, Google Drive, Microsoft OneDrive</p>
+				</section>
+
+				<section>
+					<h4>Database Services 🗃️</h4>
+					<p>SQL: Amazon RDS, Azure SQL, Google Cloud SQL</p>
+					<p>Non-SQL: Amazon DynamoDB, Azure Cosmos DB, Google Bigtable</p>
+					<p class="fragment">Serverless SQL: Amazon Athena</p>
+				</section>
+
+				<section>
+					<h4>Event-driven Services 🔄️</h4>
+					<p>Run code in response to events in other services, without managing servers!</p>
+					<p>AWS Lambda, Azure Functions, Google Cloud Functions</p>
+					<p class="fragment">Example: when an Excel file is uploaded to an S3 bucket, transform it to CSV for easy manipulation</p>
+				</section>
+
+				<section>
+					<h4>Networking Services 📶</h4>
+					<p>All cloud providers offer virtual, software-defined networks</p>
+					<p>Cloud networks can be connected to campus via VPN</p>
+					<p>Sophisticated, flexible software-defined firewalls</p>
+				</section>
+
+				<section>
+					<h4>Many (many (many)) other services 🛠️</h4>
+					<p>Cloud providers use their own IaaS and event-driven services to offer:</p>
+					<ul>
+						<li>Machine Learning</li>
+						<li>Management & Monitoring</li>
+						<li>Developer Tools</li>
+						<li>Content Delivery</li>
+						<li>etc etc etc</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>SECURITY: THE SHARED RESPONSIBILITY MODEL 🛡️</h4>
+					<p>The cloud provider is responsible for everything "beneath the surface".</p>
+					<ul>
+					<li class="fragment">Physical access to data centers</li>
+					<li class="fragment">Patching of hypervisor hosts and managed systems</li>
+					<li class="fragment">Physical networks</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>SECURITY: THE SHARED RESPONSIBILITY MODEL 🛡️</h4>
+					<p>Customer is responsible for the security of all resources they create!</p>
+					<ul>
+						<li class="fragment">OS patching</li>
+						<li class="fragment">Firewall rules</li>
+						<li class="fragment">User access keys</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h4>SECURITY 🛡️</h4>
+					<p>Cloud environments can be extremely secure.</p>
+					<p>Or insecure.</p>
+					<p>We are here to help!</p>
+				</section>
+
+				<section>
+					<h4>Compliance ️👮🏽‍♀️</h4>
+					<p>Cloud can also be HIPAA-compliant!</p>
+					<p>Use cases include health-related applications, storing medical images, analyzing identifiable data</p>
+					<p class="fragment">Cloud providers have "quickstarts" for creating compliant environments</p>
+				</section>
+
+				<section>
+					<h4>Pricing 💵</h4>
+					<p>PaaS and IaaS are billed based on usage.</p>
+					<p>Actually understanding your bill is difficult.</p>
+					<p class="fragment">Example: Instance is created with 1TB hard drive. You pay for instance time while it is turned on.</p>
+					<p class="fragment">Shut it down without deleting it and you still pay for hard drive space!</p>
+				</section>
+
+				<section>
+					<h4>Saving Money in the Cloud 💵</h4>
+					<p>Instance reservations*</p>
+					<p class="fragment">* only if you know you will be utilizing the instance >80% of the time over 12 months</p>
+				</section>
+
+				<section>
+					<h4>Saving Money in the Cloud 💵</h4>
+					<p>Spot/low priority/pre-emptible instances*</p>
+					<p class="fragment">* only if you can tolerate losing your instance (checkpoint/restart)</p>
+				</section>
+
+				<section>
+					<h4>Saving Money in the Cloud 💵</h4>
+					<p>Data storage tiers and lifecycle policies*</p>
+					<p class="fragment">* only if you understand your data access patterns!</p>
+				</section>
+
+				<section>
+					<h4>Best Practices 🌟</h4>
+					<ul>
+						<li class="fragment">Tag everything</li>
+						<li class="fragment">Use temporary access keys and MFA whenever possible</li>
+						<li class="fragment">Never store credentials on instances or in code</li>
+						<li class="fragment">Use roles with minimum possible permissions</li>
+						<li class="fragment">Automate as much as possible</li>
+						<li class="fragment">Contact us for help!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Get Started 🏋️‍♀️</h4>
+					<p>cloud.northwestern.edu</p>
+					<p>Existing agreements with AWS & Azure, GCP coming in future</p>
+				</section>
+
+                <section>
+					<h4>Questions? 🙋</h4>
+					<p>&nbsp;</p>
+					<p>m-rich@northwestern.edu</p>
+					<p>jenni.hartman@northwestern.edu</p>
+                </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                history: true,
+                math: {
+                    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                },
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

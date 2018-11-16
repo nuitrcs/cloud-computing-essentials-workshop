@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Cloud Computing Essentials</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/northwestern.css">
@@ -22,7 +22,8 @@
 		</script>
 	</head>
 	<body>
-		<div class="reveal">
+ h1,
+.reveal.rtl .slides h2,		<div class="reveal">
 			<div class="slides">
 
                 <section>
@@ -33,6 +34,7 @@
                 <section>
                     <h2>Matthew Rich</h2>
                     <p>m-rich@northwestern.edu</p>
+                    <p>
                     <h2>Jenni Hartman</h2>
                     <p>jenni.hartman@northwestern.edu</p>
                 </section>
@@ -113,13 +115,13 @@
 				<section>
 					<h4>Storage Services 📁</h4>
 					<p>File Storage: NFS-style file access</p>
-					<p>E.g. Amazon EFS, Azure File Storage, Google Cloud Filestore</p>
+					<p>E.g. Amazon EFS, AWS Storage Gateway, Azure File Storage, Google Cloud Filestore</p>
 				</section>
 
 				<section>
 					<h4>Storage Services 📁</h4>
-					<p>Many Software-as-a-Service-style storage offerings!</p>
-					<p>Dropbox, Box, Google Drive, Microsoft OneDrive</p>
+					<img src="img/saascloud.png" style="border: 2px solid #ccc;">
+					<p class="fragment">Many Software-as-a-Service-style options!</p>
 				</section>
 
 				<section>
@@ -151,7 +153,7 @@
 						<li>Management & Monitoring</li>
 						<li>Developer Tools</li>
 						<li>Content Delivery</li>
-						<li>etc etc etc</li>
+						<li>and more</li>
 					</ul>
 				</section>
 
@@ -172,6 +174,7 @@
 						<li class="fragment">OS patching</li>
 						<li class="fragment">Firewall rules</li>
 						<li class="fragment">User access keys</li>
+						<li class="fragment">MFA requirements</li>
 					</ul>
 				</section>
 				
@@ -187,6 +190,7 @@
 					<p>Cloud can also be HIPAA-compliant!</p>
 					<p>Use cases include health-related applications, storing medical images, analyzing identifiable data</p>
 					<p class="fragment">Cloud providers have "quickstarts" for creating compliant environments</p>
+					<p class="fragment">SaaS cloud storage providers have compliant offerings (e.g. Box, Dropbox)</p>
 				</section>
 
 				<section>
@@ -218,7 +222,7 @@
 				<section>
 					<h4>Best Practices 🌟</h4>
 					<ul>
-						<li class="fragment">Tag everything</li>
+						<li class="fragment">Tag everything!</li>
 						<li class="fragment">Use temporary access keys and MFA whenever possible</li>
 						<li class="fragment">Never store credentials on instances or in code</li>
 						<li class="fragment">Use roles with minimum possible permissions</li>
